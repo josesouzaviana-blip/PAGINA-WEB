@@ -50,27 +50,30 @@
     </header>
 
     <main>
-        <img src="imagem1.jpg" alt="Ícone ilustrativo para blog de tecnologia e educação. A imagem mostra uma lâmpada brilhante com circuitos e números binários no centro, posicionada à frente de uma pilha de livros coloridos e um capelo de formatura.">
+        <img src="imagem.png" alt="Ícone ilustrativo para blog de tecnologia e educação. A imagem mostra uma lâmpada brilhante com circuitos e números binários no centro, posicionada à frente de uma pilha de livros coloridos e um capelo de formatura.">
        <div>
         <h2>Meu primeiro post</h2>
         <p class="autor"><strong>Por:</strong> Jose S. Viana</p>
         <p>Aqui nós vamos aprender um pouco mais sobre programação.</p>
         <p>Vamos conhecer algumas dicas para auxiliar na construção de uma página na web.</p>
   <button>🤨<span>0</span></button>
-    </div>
-    </main>
+  <button>💩<span>0</span></button>
+     </div>
+   </main>
 </body>
 
 <script>
-    const botao = document.querySelector("button");
-botao.addEventListener("click", botaoClicado);
+const botoes = document.querySelectorAll("button");
 
+botoes.forEach(function(botao) {
+botao.addEventListener("click", botaoClicado);
 function botaoClicado () {
 console.log("fui clicado");
 let texto = botao.querySelector("span");
 texto.textContent++;
 }
+});
 </script>
 
 </html>
-
+ 
